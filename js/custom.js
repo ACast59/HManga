@@ -118,7 +118,7 @@ $(document).ready(function() {
 
 function main() {
   for (i = 0; i < pages.length; i++) {
-    pages[i] = pages[i].replace("http", "https")
+    pages[i] = pages[i].replace("http://", "https://")
   }
   if (page_post) {
     do_once();
