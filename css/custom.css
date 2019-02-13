@@ -1,0 +1,49 @@
+body {
+  padding-top: 71px;
+}
+
+.row.row-grid [class*=col-]+[class*=col-] {
+  margin-bottom: 15px;
+}
+
+.navbar .form-inline .btn {
+  font-size: 14px;
+  padding: 7.5px 15px;
+}
+
+.status-message a:last-of-type {
+  display: none;
+}
+
+.card .card-title,
+.card .card-header {
+  font-weight: 600;
+}
+
+.card .input-group .form-control {
+  border-right: 0;
+}
+
+.card .input-group-btn .btn {
+  font-size: 14px;
+  border-radius: 0 3px 3px 0;
+  padding: 7.5px 15px;
+}
+
+#hm-page-list {
+  width: 65px;
+}
+
+#hm-post-body div {
+  min-height: 300px;
+}
+
+#hm-related-mangas {
+  width: 100%;
+  text-align: center;
+  margin: 15px auto;
+}
+
+#hm-related-mangas .card-title {
+  font-size: 15px;
+}
