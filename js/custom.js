@@ -50,7 +50,7 @@ function changePage(a) {
         $("#hm-post-body a").attr("href", "#" + (a + 2));
       }
     }
-	  $('#hm-page-list').val("#" + (val + 1));
+    $('#hm-page-list').val("#" + (val + 1));
   }
   preload(a + 1);
   $("html, body").stop();
@@ -62,7 +62,7 @@ function changePage(a) {
 function do_once() {
   if (!done_once) {
     var e = parseInt(current_page);
-	  for (var c = 1; c < pages.length + 1; c++) {
+    for (var c = 1; c < pages.length + 1; c++) {
       $("#hm-page-list").append('<option id="option-' + c + '" value="#' + c + '">' + c + "</option>")
     }
     var h = document,
@@ -80,40 +80,40 @@ $(document).ready(function() {
     }
     return false;
   });
-	
-	$("#hm-chapter-page__prev").click(function() {
-		var a = parseInt(current_page);
-		if ((a > 1)) {
-			window.location = "#" + (a - 1)
-		}
-	});
-	
-	$("#hm-chapter-page__next").click(function() {
-		var a = parseInt(current_page);
-		if (a < pages.length) {
-			window.location = "#" + (a + 1);
-		} else {
-			if (current_page == "") {
-				window.location = "#2"
-			}
-		}
-	});
-	
-	$("body").keydown(function(b) {
-		var a = parseInt(current_page);
-		if (b.keyCode == 39) {
-			if (a < pages.length) {
-				window.location = "#" + (a + 1)
-			} else {
-				if (current_page == "") {
-					window.location = "#2"
-				}
-			}
-		}
-		if ((a > 1) && (b.keyCode == 37)) {
-			window.location = "#" + (a - 1)
-		}
-	});
+  
+  $("#hm-chapter-page__prev").click(function() {
+    var a = parseInt(current_page);
+    if ((a > 1)) {
+      window.location = "#" + (a - 1)
+    }
+  });
+  
+  $("#hm-chapter-page__next").click(function() {
+    var a = parseInt(current_page);
+    if (a < pages.length) {
+      window.location = "#" + (a + 1);
+    } else {
+      if (current_page == "") {
+        window.location = "#2"
+      }
+    }
+  });
+  
+  $("body").keydown(function(b) {
+    var a = parseInt(current_page);
+    if (b.keyCode == 39) {
+      if (a < pages.length) {
+        window.location = "#" + (a + 1)
+      } else {
+        if (current_page == "") {
+          window.location = "#2"
+        }
+      }
+    }
+    if ((a > 1) && (b.keyCode == 37)) {
+      window.location = "#" + (a - 1)
+    }
+  });
 });
 
 function main() {
@@ -197,7 +197,7 @@ function get_random(g, h) {
 
 function get_feeds(c, d, b, a) {
   $.ajax({
-    url: "https://www.hmanga.asia/feeds/posts/" + c + "start-index=" + d + "&max-results=" + b + "&alt=json-in-script",
+    url: "https://www.hmanga.asia/feeds/posts/default?start-index=" + d + "&max-results=" + b + "&alt=json-in-script",
     type: "GET",
     dataType: "jsonp",
     success: function(e) {
