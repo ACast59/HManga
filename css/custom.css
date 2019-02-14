@@ -38,12 +38,6 @@ body {
   min-height: 300px;
 }
 
-#hm-related-mangas {
-  width: 100%;
-  text-align: center;
-  margin: 15px auto;
-}
-
 #hm-related-mangas .card-title {
   font-size: 15px;
 }
