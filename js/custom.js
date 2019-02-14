@@ -197,7 +197,7 @@ function get_random(g, h) {
 
 function get_feeds(c, d, b, a) {
   $.ajax({
-    url: "https://www.hmanga.asia/feeds/posts/default?start-index=" + d + "&max-results=" + b + "&alt=json-in-script",
+    url: HOME + "feeds/posts/default?max-results=500&alt=json-in-script",
     type: "GET",
     dataType: "jsonp",
     success: function(e) {
