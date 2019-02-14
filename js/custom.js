@@ -1,4 +1,4 @@
-var HOME = "https://hmanga-online.blogspot.com/";
+var HOME = "https://www.hmanga.asia/";
 var URL_ACTUAL = window.location.href;
 var page_post = URL_ACTUAL.indexOf(".html") != -1;
 var N_POSTS = 499;
@@ -39,7 +39,7 @@ function preload(a) {
 
 function changePage(a) {
   a = parseInt(a) - 1;
-	val = parseInt(a);
+  val = parseInt(a);
   last_visited = a + 1;
   if (a < pages.length) {
     $("#display-img").attr("src", pages[a]);
@@ -50,10 +50,10 @@ function changePage(a) {
         $("#hm-post-body a").attr("href", "#" + (a + 2));
       }
     }
-		$('#hm-page-list').val("#" + (val + 1));
+	  $('#hm-page-list').val("#" + (val + 1));
   }
   preload(a + 1);
-	$("html, body").stop();
+  $("html, body").stop();
   $("html, body").animate({
     scrollTop: 0
   }, "400")
@@ -62,7 +62,7 @@ function changePage(a) {
 function do_once() {
   if (!done_once) {
     var e = parseInt(current_page);
-		for (var c = 1; c < pages.length + 1; c++) {
+	  for (var c = 1; c < pages.length + 1; c++) {
       $("#hm-page-list").append('<option id="option-' + c + '" value="#' + c + '">' + c + "</option>")
     }
     var h = document,
@@ -73,7 +73,7 @@ function do_once() {
 }
 
 $(document).ready(function() {
-	$('#hm-page-list').on('change', function () {
+  $('#hm-page-list').on('change', function () {
     var url = $(this).val();
     if (url) {
       window.location = url;
