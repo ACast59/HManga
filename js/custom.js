@@ -68,7 +68,6 @@ function do_once() {
     }
     var h = document,
     k = h.createElement("script");
-    get_feeds("default?", 1, 1, "random")
   }
   done_once = true
 }
