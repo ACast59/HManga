@@ -1,1 +1,1 @@
-# HManga
+# HManga CDN
