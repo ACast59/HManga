@@ -29,6 +29,7 @@ $(document).ready(function() {
     }
   });
 });
+
 $(window).hashchange(function() {
   main()
 });
@@ -154,58 +155,6 @@ function main() {
       }
     }
   }
-}
-
-function random(h) {
-  var a = h.feed.openSearch$totalResults.$t;
-  var c, b, e, g;
-  var f = new Array(7);
-  for (c = 1; c < f.length; c++) {
-    f[0] = c;
-    do {
-      g = false;
-      e = Math.floor((Math.random() * a) + 1);
-      for (b = 1; b <= f[0]; b++) {
-        if (f[b] == e) {
-          g = true
-        }
-      }
-    } while (g);
-    f[c] = e
-  }
-  for (var c = 1; c < f.length; c++) {
-    get_feeds("default?", f[c], 1, "get_random")
-  }
-}
-
-function get_random(g, h) {
-  var e, a, f, c, b;
-  e = g.feed.entry[0];
-  c = e.link[2].href;
-  f = e.title.$t;
-  if (e.content == undefined) {
-    a = e.summary.$t
-  } else {
-    a = e.content.$t
-  }
-  b = a.slice(a.indexOf('"') + 1, a.indexOf('",')).replace("/s1600/", "/s180/");
-  if (b.indexOf("imgur") != -1) {
-    b = b.replace(".jpg", "m.jpg")
-  }
-  $("#hm-related-mangas").append('<div class="col-6 col-sm-4 col-lg-2 px-2"><div class="card bg-dark mb-3"><a title="' + f + '" href="' + c + '"><img class="card-img-top" src="' + b + '" width="124" height="180" alt="' + f + '" /></a><div class="card-body py-3"><a class="text-white" title="' + f + '" href="' + c + '"><h5 class="card-title text-truncate m-0">' + f + '</h5></a></div></div></div>')
-}
-
-function get_feeds(c, d, b, a) {
-  $.ajax({
-    url: HOME + "feeds/posts/" + c + "start-index=" + d + "&max-results=" + b + "&alt=json-in-script",
-    type: "GET",
-    dataType: "jsonp",
-    success: function(e) {
-      if (a != "") {
-        window[a](e)
-      }
-    }
-  })
 }
 
 $(function () {
