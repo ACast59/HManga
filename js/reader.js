@@ -11,11 +11,11 @@ var done_multi = false;
 console.log = console.debug = console.warn = console.info = alert = function() {};
 $(document).ready(function() {
   main();
-  if (typeof(lnk) == "undefined") {
+  if (typeof(hm-dl) == "undefined") {
     $("#hm-download").remove()
   }
   $("#hm-download").click(function() {
-    var b = window.open("https://cut-urls.com/st?api=1af93ae3896701cd6c5a9bed60e5a58c2aa5fa8e&url=" + encodeURIComponent(lnk))
+    var b = window.open("https://cut-urls.com/st?api=1af93ae3896701cd6c5a9bed60e5a58c2aa5fa8e&url=" + encodeURIComponent(hm-dl))
   });
   $("#hm-multipages").click(function() {
     if (!done_multi) {
