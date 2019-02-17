@@ -12,7 +12,7 @@ var done_multi = false;
 console.log = console.debug = console.warn = console.info = alert = function() {};
 $(document).ready(function() {
   main();
-  if (typeof(hm-dl) == "undefined") {
+  if (typeof(mdl) == "undefined") {
     $("#hm-download").remove()
   }
   $("#hm-download").click(function() {
