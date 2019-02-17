@@ -16,7 +16,7 @@ $(document).ready(function() {
     $("#hm-download").remove()
   }
   $("#hm-download").click(function() {
-    var b = window.open("https://cut-urls.com/st?api=1af93ae3896701cd6c5a9bed60e5a58c2aa5fa8e&url=" + encodeURIComponent(mdl))
+    var b = window.open("https://cut-urls.com/st?api=1af93ae3896701cd6c5a9bed60e5a58c2aa5fa8e&url=" + mdl)
   });
   $("#hm-multipages").click(function() {
     if (!done_multi) {
