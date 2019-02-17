@@ -5,14 +5,13 @@ var N_POSTS = 499;
 var cantPOSTS = 50;
 var done_once = false;
 var pages = [];
-var mdl = "";
 var current_page = 0;
 var last_visited;
 var done_multi = false;
 console.log = console.debug = console.warn = console.info = alert = function() {};
 $(document).ready(function() {
   main();
-  if (typeof(mdl) == "") {
+  if (typeof(mdl) == "undefined") {
     $("#hm-download").remove()
   }
   $("#hm-download").click(function() {
