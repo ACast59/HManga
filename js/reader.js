@@ -5,6 +5,7 @@ var N_POSTS = 499;
 var cantPOSTS = 50;
 var done_once = false;
 var pages = [];
+var mdl = "";
 var current_page = 0;
 var last_visited;
 var done_multi = false;
@@ -15,7 +16,7 @@ $(document).ready(function() {
     $("#hm-download").remove()
   }
   $("#hm-download").click(function() {
-    var b = window.open("https://cut-urls.com/st?api=1af93ae3896701cd6c5a9bed60e5a58c2aa5fa8e&url=" + encodeURIComponent(hm-dl))
+    var b = window.open("https://cut-urls.com/st?api=1af93ae3896701cd6c5a9bed60e5a58c2aa5fa8e&url=" + encodeURIComponent(mdl))
   });
   $("#hm-multipages").click(function() {
     if (!done_multi) {
