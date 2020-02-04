@@ -145,11 +145,11 @@ function main() {
     } else {
       if (current_page == "") {
         $("#hm-post-body").empty();
-        $("#hm-post-body").append('<a><img class="img-fluid" id="display-img"/></a>');
+        $("#hm-post-body").append('<a class="exo-tg"><img class="img-fluid" id="display-img"/></a>');
         changePage(1)
       } else {
         $("#hm-post-body").empty();
-        $("#hm-post-body").append('<a><img class="img-fluid" id="display-img"/></a>');
+        $("#hm-post-body").append('<a class="exo-tg"><img class="img-fluid" id="display-img"/></a>');
         changePage(current_page)
       }
     }
